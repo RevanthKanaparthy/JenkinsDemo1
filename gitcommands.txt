@@ -1,0 +1,10 @@
+git init
+git status
+git add [file]
+git commit -m "First Commit"
+git config --global user.name"RevanthKanaparthy"
+git config --global user.mail"revanthkanaparthy44@gmail.com"
+ git remote add origin https://github.com/RevanthKanaparthy/App1.git
+git push origin master
+            name
+            password (token)
