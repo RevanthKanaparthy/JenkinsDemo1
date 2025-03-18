@@ -1,29 +1,22 @@
-import java.util.Scanner;
-
 public class ReverseNumber {
     public static void main(String[] args) {
-     
-        Scanner scanner = new Scanner(System.in);
+        // Get the number from command-line arguments or Jenkins environment variables
+        String numberStr = System.getenv("NUMBER_TO_REVERSE");
 
-      
-        System.out.print("Enter a number: ");
-        int number = scanner.nextInt();
-
-       
-        int reversed = 0;
-
-      
-        while (number != 0) {
-            int digit = number % 10;  
-            reversed = reversed * 10 + digit;
-            number = number / 10;     
+        if (numberStr == null || numberStr.isEmpty()) {
+            System.out.println("Please provide a number.");
+            return;
         }
 
-      
-        System.out.println("Reversed Number: " + reversed);
+        int number = Integer.parseInt(numberStr);
+        int reversed = 0;
 
-     
-        scanner.close();
+        while (number != 0) {
+            int digit = number % 10;
+            reversed = reversed * 10 + digit;
+            number = number / 10;
+        }
+
+        System.out.println("Reversed Number: " + reversed);
     }
 }
-
