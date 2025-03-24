@@ -5,7 +5,8 @@ git status
 git commit -m "First Commit"
 git config --global user.name"RevanthKanaparthy"
 git config --global user.mail"revanthkanaparthy44@gmail.com"
- git remote add origin https://github.com/RevanthKanaparthy/App1.git
+git remote add origin https://github.com/RevanthKanaparthy/App1.git
+git remote rm origin
 git push origin master
             name
             password (token)
