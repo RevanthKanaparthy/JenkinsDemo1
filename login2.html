@@ -21,14 +21,17 @@
     document.getElementById('loginForm').addEventListener('submit', function(event) {
       event.preventDefault(); // Prevent the default form submission
       
-      // Example validation: username = "admin", password = "1234"
       const username = document.getElementById('username').value;
       const password = document.getElementById('password').value;
 
+      console.log("Username entered:", username);
+      console.log("Password entered:", password);
+
       if (username === "admin" && password === "1234") {
-        // Redirect to bgcolor.html if credentials are valid
-        window.location.href = "bgcolor.html";
+        console.log("Login successful! Redirecting...");
+        window.location.href = "bgcolor.html"; // Ensure this file exists
       } else {
+        console.error("Invalid username or password!");
         alert("Invalid username or password!");
       }
     });
