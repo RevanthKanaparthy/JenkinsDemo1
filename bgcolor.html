@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color</title>
+    <style>
+        body {
+            background-color: white; /* Default background color */
+        }
+        .color-options {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Change Background Color</h1>
+    <div class="color-options">
+        <label>
+            <input type="radio" name="bgColor" value="white" checked>
+            White
+        </label>
+        <label>
+            <input type="radio" name="bgColor" value="lightblue">
+            Light Blue
+        </label>
+        <label>
+            <input type="radio" name="bgColor" value="lightgreen">
+            Light Green
+        </label>
+        <label>
+            <input type="radio" name="bgColor" value="lightcoral">
+            Light Coral
+        </label>
+    </div>
+
+    <script>
+        const colorOptions = document.getElementsByName('bgColor');
+
+        // Add event listeners to all radio buttons
+        colorOptions.forEach(option => {
+            option.addEventListener('change', (event) => {
+                document.body.style.backgroundColor = event.target.value;
+            });
+        });
+    </script>
+
+</body>
+</html>
